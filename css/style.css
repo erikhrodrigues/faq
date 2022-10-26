@@ -15,6 +15,7 @@ body {
     height: 100vh;
     width: 100vw;
     font-weight: 400;
+    margin: 0 auto;
     font-family: 'Kumbh Sans', sans-serif;
     background-image: var(--background);
 }
@@ -22,45 +23,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: auto;
+    justify-content: center;
     position: absolute;
-    width: 56vw;
-    margin-top:2rem;
+    margin-top:70px;
 }
-
 .personagem {
+    top: -10px;
     position: relative;
-    width: 100%;
     z-index: 1;
-}
-
-.caixa {
-    position: relative;
-    margin: -6.5rem 0 0 -8rem;
-    width: 40%;
-    z-index: 3;
+    
 }
 .sombra {
+    top: -90px;
     position: relative;
-    margin-top: -4rem;
-    width: 100%;
     z-index: 0;
 }
 
 h1 {
-    padding: 2rem 0;
+    padding: 3rem 0 1rem;
     font-size:32px ;
     color:#1E1F36;
     text-align: center; 
 }
 
 .perguntas-respostas {
-    margin-top: 18vh;
+    margin-top: 160px;
     width: 80vw;
     padding: 4rem 0 2rem 0;
     background-color: #FFFFFF;
     border-radius: 30px;
+    box-shadow: 0px 20px 43px -7px rgba(0,0,0,0.75);
 }
 
 
@@ -85,6 +78,10 @@ h1 {
     font-weight: 400;
     color: #4B4C5F;
     background-color: #FFFFFF;
+}
+
+.pergunta:hover {
+    color: #F47B56;
 }
 
 .flecha {
@@ -112,4 +109,71 @@ h1 {
 .mostrar-resposta {
     display: block;
     max-height: 200px;
+}
+
+/*----Responsivo----*/
+
+@media screen and (min-width:410px) {
+
+    .imagens {
+        margin-top:110px;
+    }
+    .perguntas-respostas {
+        margin-top: 200px;
+     }        
+}
+
+@media screen and (min-width:700px) {
+
+    .imagens {
+        margin-top:40px;
+        width: 0 auto;
+    }
+
+    .personagem{
+        width: 450px;
+    }
+    .sombra{
+        width: 400px;
+        top: -170px;
+    }
+    h1 {
+        margin-top: 20px;
+    }
+    .perguntas-respostas {
+        padding: 8rem 0 5rem;
+     }        
+}
+
+@media screen and (min-width:1024px) {
+    
+    .imagens {
+        margin:260px 0 0 -490px;
+        width: 0 auto;
+    }
+
+    .personagem{
+        width: 500px;
+        margin-left: -28px;
+    }
+    .sombra{
+        width: 450px;
+        top: -140px;
+    }
+
+    h1 {
+        margin-top: 0;
+        text-align: left;
+        margin-left: 40px;
+    }
+    .perguntas-respostas {
+        padding: 30px 0 80px 0;
+        display: grid;
+        max-width: 920px;
+        grid-template-columns: 1fr 1fr;
+    }    
+    
+    .container-geral {
+        grid-column: 2;
+    }
 }
