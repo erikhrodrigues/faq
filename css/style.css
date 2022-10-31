@@ -32,12 +32,8 @@ body {
     top: -10px;
     position: relative;
     z-index: 1;
+    filter: drop-shadow(-4px 30px 10px rgba(0, 0, 0, 0.5));
     
-}
-.sombra {
-    top: -90px;
-    position: relative;
-    z-index: 0;
 }
 
 h1 {
@@ -78,10 +74,6 @@ h1 {
     font-weight: 400;
     color: #4B4C5F;
     background-color: #FFFFFF;
-}
-
-.pergunta:hover {
-    color: #F47B56;
 }
 
 .flecha {
@@ -159,6 +151,10 @@ h1 {
     .sombra{
         width: 450px;
         top: -140px;
+    }
+
+    .pergunta:hover {
+        color: #F47B56;
     }
 
     h1 {
